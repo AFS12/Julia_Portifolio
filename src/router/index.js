@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import mainLayout from '../layouts/mainLayout.vue'
-import home from '../components/home.vue'
+import photos from '../components/photos.vue'
 
 Vue.use(VueRouter)
 
@@ -9,11 +9,12 @@ const routes = [
   {
     path: '/',
     component: mainLayout,
+    name:'home',
     children: [
       {
-        path: '/home',
-        name: 'home',
-        component: home
+        path: '/photos',
+        name: 'photos',
+        component: photos
       }
     ]
   },
